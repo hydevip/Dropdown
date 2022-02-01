@@ -19,8 +19,6 @@ const Dropdown = (props: DropdownProps) => {
     const inputRef = useRef<HTMLInputElement>(null)
     const listRef = useRef<HTMLUListElement>(null)
 
-
-
     useEffect(() => {
         if (!!props.value) {
             setSearchValue(`${props.value.firstName} ${props.value.lastName}`)
@@ -98,7 +96,7 @@ const Dropdown = (props: DropdownProps) => {
         return (<>
             {filteredOptions.length > 0 &&
                 <ul ref={listRef}
-                    data-testid= {"list"}
+                    data-testid={"list"}
                 >
                     {filteredOptions.map((item, index) =>
                         <li
