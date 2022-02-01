@@ -1,5 +1,8 @@
 # Dropdown Component
 
+![image](https://user-images.githubusercontent.com/35841222/152028444-9d2837d6-a213-4d87-a56f-59aba27e688b.png)
+
+
 This Dropdown Component was built using Node JS v17.2.0, React 17.0.2 and Typescript, and Redux-Toolkit.
 The Dropdown component has its own internal state.
 As props, the component accepts a list with managers, a value, a callback triggered on selection and a placeholder. The Value/ Placeholder are optional.
