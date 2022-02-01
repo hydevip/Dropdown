@@ -1,18 +1,18 @@
 # Dropdown Component
 
 This Dropdown Component was built using Node JS v17.2.0, React 17.0.2 and Typescript, and Redux-Toolkit.
-The Dropdown component has it's own internal state.
+The Dropdown component has its own internal state.
 As props, the component accepts a list with managers, a value, a callback triggered on selection and a placeholder. The Value/ Placeholder are optional.
-The main App component has it's own Redux store setup using Redux-Toolkit that has 2 actions :
+The main App component has its own Redux store setup using Redux-Toolkit that has 2 actions :
  1. addManagersList: used to store the fetched list options
  2. newSelection: used to update the store with the last dropdown selection
 
 The App component also displays details abouth the latest selection.
 All the below mentioned aspects are covered:
 
-When user clicks into the input field, he/she sees the full list of managers.
+When the user clicks into the input field, he/she sees the full list of managers.
 The list shows up to 2 managers, the rest can be seen by scrolling inside the list.
-When user starts typing into the input field, matching results appear in the list.
+When the user starts typing into the input field, matching results appear in the list.
 	
 Managers are filtered on both first name and last name.
 			
