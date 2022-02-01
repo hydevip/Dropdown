@@ -1,6 +1,30 @@
-# Getting Started with Create React App
+# Dropdown Component
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This Dropdown Component was built using Node JS v17.2.0, React 17.0.2 and Typescript, and Redux-Toolkit.
+The Dropdown component has it's own internal state.
+As props, the component accepts a list with managers, a value, a callback triggered on selection and a placeholder. The Value/ Placeholder are optional.
+The main App component has it's own Redux store setup using Redux-Toolkit that has 2 actions :
+ 1. addManagersList: used to store the fetched list options
+ 2. newSelection: used to update the store with the last dropdown selection
+
+The App component also displays details abouth the latest selection.
+All the below mentioned aspects are covered:
+
+When user clicks into the input field, he/she sees the full list of managers.
+The list shows up to 2 managers, the rest can be seen by scrolling inside the list.
+When user starts typing into the input field, matching results appear in the list.
+	
+Managers are filtered on both first name and last name.
+			
+Filtering is case insensitive.	
+		
+Managers are filtered across first name and last name (eg. “tMc” =&gt; Harriet McKinnley.)
+When user confirms the selection with the enter key, the full name of the selected manager is displayed in the input field and the list of available managers hides. (Bonus)
+User can navigate the list of managers with arrow up and arrow down keys. (Bonus)
+
+When the input loses focus, the list of available managers disappears and the entered value is being kept.
+When the user clicks back into the input field a list of filtered managers by the kept value is shown.
+
 
 ## Available Scripts
 
@@ -16,8 +40,19 @@ You will also see any lint errors in the console.
 
 ### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Launches the test runner in the interactive watch mode. The project has one suite with 5 tests.
+ PASS  src/Components/Dropdown/Dropdown.test.tsx
+  Dropdown Component 
+    ✓ renders properly (42 ms)
+    ✓ has the correct placeholder (12 ms)
+    ✓ allows the user to input a search value (104 ms)
+    ✓ renders the list with options when the input is focused (29 ms)
+    ✓ selects a manager when the user types a value within INPUT and hits ENTER (38 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       5 passed, 5 total
+Snapshots:   0 total
+Time:        1.997 s, estimated 2 s
 
 ### `npm run build`
 
